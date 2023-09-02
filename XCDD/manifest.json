@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "A-Zielonka",
+  "version": "1.0",
+  "description": "usun zielonke",
+
+  "content_scripts": [
+    {
+      "js": ["script.js"],
+      "matches": [
+        "https://wykop.pl/tag/famemma",
+        "https://wykop.pl/tag/famemma/strona/*"
+      ]
+    }
+  ]
+}
