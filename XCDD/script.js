@@ -36,7 +36,7 @@ document.addEventListener("load", usuwanie())
 
 
 const resizeObserver = new ResizeObserver(entries => {
-        setTimeout(usuwanie, 200)
+        usuwanie()
 
     }
 )
