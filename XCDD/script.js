@@ -1,5 +1,12 @@
+let zakazane = [
+    "strumyk",
+    "discord",
+    "dsc",
+    
+]
+console.log("#gra sz?")
 function usuwanie() {
-    console.log("XD")
+
     let zielonki = document.getElementsByClassName("green-profile")
     if (zielonki.length > 0) {
         for (let i = 0; i < zielonki.length; i++) {
@@ -15,15 +22,12 @@ function usuwanie() {
         if (typeof(posty[i].closest(".entry")) != 'undefined' && posty[i].closest(".entry") != null) {
         let post = posty[i].textContent.replace(/\s/g, '')
         let u = () => { posty[i].closest(".entry ").style.display = "none" }
-        if (post.includes("strumyk")) {
-            u()
-        }
-        if (post.includes("discord")) {
-           u()
-        }
-        if (post.includes("blazej")) {
-            u()
-        }
+        zakazane.forEach((xd) => {
+            if (post.indexOf(xd) !== -1) {
+
+                u();
+            }
+        })
     }
         
     }
